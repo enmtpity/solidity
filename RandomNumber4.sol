@@ -235,7 +235,7 @@ contract RandomNumber {
         )
     {
         return (price/(quantity1+quantity2+quantity3), quantity1, quantity2, quantity3,normal*quantity1*1000/maxNumber,
-        rare*quantity2*1000/maxNumber,ultimate*quantity3*100/maxNumber);
+        rare*quantity2*1000/maxNumber,ultimate*quantity3*1000/maxNumber);
     }
 
     function auctionEnd() public isOwner {
