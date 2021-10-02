@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include <unistd.h>
 
 int exec_slot(int *na,int *nb, int *nc,int m){
     srand((unsigned int)time(NULL));
@@ -28,13 +29,16 @@ int exec_slot(int *na,int *nb, int *nc,int m){
 }
 
 int main(){
+
+     int tt[200]={0};//期待収益の配列
+    
     
     int e[200]={0};//期待収益
     int na[200]={0};//個数
     int nb[200]={0};
     int nc[200]={0};
 
-    int ca=100;
+    int ca=100;//値段
     int cb=500;
     int cc=1000;
 
@@ -47,9 +51,26 @@ int main(){
 
     int total=0;//合計収益
 
-    na[0]=21;
-    nb[0]=6;
-    nc[0]=3;
+   
+
+    for(int b=0;b<50;b++){
+        sleep(1);
+
+
+    
+
+    m=0; //何回目の抽選か
+
+
+   
+
+    total=0;//合計収益
+
+   
+
+    na[0]=35;
+    nb[0]=10;
+    nc[0]=5;
 
     pa[0]=(double)na[0]/(na[0]+nb[0]+nc[0]);
     pb[0]=(double)nb[0]/(na[0]+nb[0]+nc[0]);
@@ -75,14 +96,15 @@ int main(){
 
     }
 
-    for(int i=0;i<40;i++){
+
+    /*for(int i=0;i<40;i++){
         printf("%d\n",e[i]);
         
+    }*/
+    printf("%d\n",total);
+
+
     }
-    printf("%d",total);
-
-
-    
 
 
     return 0;
